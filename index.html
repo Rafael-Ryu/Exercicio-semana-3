@@ -104,6 +104,8 @@
                 moeda.setVisible(false);
                 var posicaoMoedaY = Phaser.Math.RND.between(50, 650);
                 moeda.setPosition(posicaoMoedaY, 100);
+                // Reseta a velocidade da moeda, pq se nn da pra moeda ficar ganhando Momentum infinito
+                moeda.setVelocity(0, 0);
                 pontuacao += 1;
                 placar.setText('Moedas: ' + pontuacao);
                 moeda.setVisible(true);
